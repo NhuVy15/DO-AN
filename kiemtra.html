@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiểm tra và xác nhận đơn hàng</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+    }
+    h2 {
+        color: #343a40;
+        text-align: center;
+    }
+    form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px auto;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #495057;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+    }
+    button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #dddddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    td img {
+        max-width: 100px;
+        max-height: 100px;
+        border-radius: 5px;
+    }
+    .delete-button {
+        background-color: #dc3545;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    .delete-button:hover {
+        background-color: #c82333;
+    }
+</style>
+</head>
+<body>
+<h2>Kiểm tra và xác nhận đơn hàng</h2>
+<form id="tourForm">
+    <label for="tourId">Mã Đơn Hàng:</label>
+    <input type="text" id="tourId" required>
+    
+    <label for="destination">Giá đơn hàng:</label>
+    <input type="text" id="destination" required>
+    
+    <label for="price">Số Lượng:</label>
+    <input type="number" id="price" required>
+    
+    <label for="image">Hình ảnh:</label>
+    <input type="file" id="image" accept="image/*" required>
+    
+    <button type="submit">Thêm đơn hàng</button>
+</form>
+
+<table id="tourTable">
+    <thead>
+        <tr>
+            <th>Mã Đơn Hàng</th>
+            <th>Giá đơn hàng</th>
+            <th>Số Lượng</th>
+            <th>Hình ảnh</th>
+			<th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody id="tourList"></tbody>
+</table>
+
+<script src="kiemtra.js"></script>
+</body>
+</html>
